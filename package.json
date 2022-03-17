@@ -1,0 +1,25 @@
+{
+  "name": "assignment1",
+  "version": "1.0.0",
+  "description": "Assignment 1 for PPAR",
+  "main": "assignment.js",
+  "directories": {
+    "build": "build",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "node assignment.js"
+  },
+  "keywords": [
+    "ppar",
+    "javascript",
+    "functional",
+    "programming"
+  ],
+  "author": "Martijn Bonajo, Stefan Sobek",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
