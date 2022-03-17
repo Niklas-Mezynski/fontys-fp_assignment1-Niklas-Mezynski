@@ -22,7 +22,7 @@ describe("Assignment 1.2 - get president by its name ", () => {
 describe("Assignment 1.3 - get the average birth year of all republican presidents ", () => {
     test('average birth is around 808', () => {
         const avgBirth = assignment.avgBirthRepublicanPresidents(assignment.allPresidents);
-        expect(avgBirth).toBeCloseTo(808.15, 1);
+        expect(avgBirth).toBeCloseTo(1871.52, 1);
     });
 
 });

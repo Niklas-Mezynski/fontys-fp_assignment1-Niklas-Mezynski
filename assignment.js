@@ -24,9 +24,10 @@ const allPresidents = JSON.parse(rawPresidents);
     party: 'DEMOCRATIC',
     state_id_born: 34 } ]
 */
-const presidentsBornAfter1950 = presidents => null;
+const presidentsBornAfter1950 = presidents => presidents.filter(president => president.birth_year > 1950);
 
 // use this line to test your code
+console.log(`Searching for Presidents born after 1950`);
 console.log(presidentsBornAfter1950(allPresidents));
 
 
@@ -41,21 +42,31 @@ console.log(presidentsBornAfter1950(allPresidents));
     party: 'REPUBLICAN',
     state_id_born: 46 } ]
 */
-const getPresidentByName = (presidents, presidentName) => null;
+const getPresidentByName = (presidents, presidentName) => presidents.filter(president => president.name == presidentName);
 
 // use this line to test your code
-console.log(getPresidentByName(allPresidents, 'ROOSEVELT T'));
+const searchName = 'ROOSEVELT T';
+console.log(`Searching for ${searchName}`);
+console.log(getPresidentByName(allPresidents, searchName));
 
 
 // 1.3. TODO your code here:
+const average = numberArr =>	{
+    let i = 0, sum = 0, ArrayLen = numberArr.length;
+    while (i < ArrayLen) {
+        sum = sum + numberArr[i++];
+}
+    return sum / ArrayLen;
+}
 // Your task is to 
 //
 // -> calculate the average birth year of all REPUBLICAN presidents!!
-
-const avgBirthRepublicanPresidents = presidents => null;
+console.log(`Calculating the average birth year of all REPUBLICAN presidents`);
+const avgBirthRepublicanPresidents = presidents => average((presidents.filter(president => president.party == "REPUBLICAN").map(pres => pres.birth_year)));
 
 // use this line to test your code
 console.log(avgBirthRepublicanPresidents(allPresidents));
+
 
 // ### DO NOT CHANGE THE FOLLOWING LINES
 module.exports = {
